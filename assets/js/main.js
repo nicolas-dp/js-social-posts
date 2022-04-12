@@ -93,6 +93,7 @@ posts.forEach(element => {
 })
 
 
+/* INIZIO MILESTONE 3 */
 //Aggiunta colore al click del pulsante LIKE 
 
 const buttonClickLike = document.querySelector(".like")
@@ -103,7 +104,7 @@ const eventClick = buttonClickLike.addEventListener("click" , function (event) {
     })
 
 
-/* INIZIO MILESTONE 3 */
+
 
 /* if (eventClick == true) {
     let elementNew = 0;
