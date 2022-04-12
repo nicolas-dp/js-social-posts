@@ -11,3 +11,7 @@ body{
     background-color: darkslateblue;
     text-align: center;
 }
+
+.avatar{
+    border-radius: 5rem;
+}
