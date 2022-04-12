@@ -6,7 +6,7 @@
 
 
 body{
-    width: 1200px;
+    width: 400px;
     margin: 2rem auto;
     background-color: darkslateblue;
     text-align: center;
@@ -14,4 +14,21 @@ body{
 
 .avatar{
     border-radius: 5rem;
+}
+
+/* .card_sup{
+    display: flex;
+    justify-content: center;
+} */
+
+
+.like, .number_like{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.blue{
+    background-color:cyan;
 }
