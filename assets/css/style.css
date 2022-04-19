@@ -16,10 +16,9 @@ body{
     border-radius: 5rem;
 }
 
-/* .card_sup{
-    display: flex;
-    justify-content: center;
-} */
+.card{
+    margin: 1rem;
+}
 
 
 .like, .number_like{

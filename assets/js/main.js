@@ -84,7 +84,7 @@ posts.forEach(element => {
         <div class="number_like">Piace a <strong>${element.n_of_like}</strong> persone</div>
         </div>
     </div>`
-    elementoDomTwo.insertAdjacentHTML("beforeend", createMarkup)
+        elementoDomTwo.insertAdjacentHTML("beforeend", createMarkup)
 
         console.log(createMarkup)
     }
@@ -97,20 +97,17 @@ posts.forEach(element => {
 //Aggiunta colore al click del pulsante LIKE 
 
 const buttonClickLike = document.querySelector(".like")
+const incraseElement = parseInt(document.querySelector(".number_like strong").textContent)
 
-const eventClick = buttonClickLike.addEventListener("click" , function (event) {
-        buttonClickLike.classList.toggle("blue")
-        return true;
-    })
-
-
-
-
-/* if (eventClick == true) {
-    let elementNew = 0;
-    elementNew += element.n_of_like + 1;
+console.log(incraseElement);
+let incrase = 0;
+let vaolore = true;
+const eventClick = buttonClickLike.addEventListener("click", function (event) {
     
-} else if (eventClick != true){
-    elementNew += element.n_of_like
-} */
+    buttonClickLike.classList.toggle("blue")
+    incrase = incraseElement + 1;
+    document.querySelector(".number_like strong").innerHTML = incrase;
+    return true;
+})
+
 
