@@ -47,15 +47,14 @@ const posts = [
 Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed. */
 
 const elementoDom = document.querySelector(".card")
-const elementoDomTwo = document.querySelector(".card_two")
-
 
 posts.forEach(element => {
-    if (element.id_post == "first_post") {
         const createMarkup = `<div class="card_sup">
         ${element.image_avatar}
+        <div class="title">
         <h5>${element.nome_autore}</h5>
         <p class="card-text"><small class="text-muted">${element.data}</small></p>
+        </div>
     </div>
 
     <div class="card_body">
@@ -67,29 +66,7 @@ posts.forEach(element => {
         </div>
     </div>`
         elementoDom.insertAdjacentHTML("beforeend", createMarkup)
-
-        console.log(createMarkup)
-    } else {
-        const createMarkup = `<div class="card_sup">
-        ${element.image_avatar}
-        <h5>${element.nome_autore}</h5>
-        <em>${element.data}</em>
-    </div>
-
-    <div class="card_body">
-        <p>${element.paragraph}</p>
-        ${element.image_post}
-        <div class="like-status">
-        <div class="like">Mi Piace</div>
-        <div class="number_like">Piace a <strong>${element.n_of_like}</strong> persone</div>
-        </div>
-    </div>`
-        elementoDomTwo.insertAdjacentHTML("beforeend", createMarkup)
-
-        console.log(createMarkup)
-    }
-
-
+        //console.log(createMarkup)
 })
 
 
@@ -101,13 +78,12 @@ const incraseElement = parseInt(document.querySelector(".number_like strong").te
 
 console.log(incraseElement);
 let incrase = 0;
-let vaolore = true;
+
 const eventClick = buttonClickLike.addEventListener("click", function (event) {
     
-    buttonClickLike.classList.toggle("blue")
+    this.classList.toggle("blue")
     incrase = incraseElement + 1;
     document.querySelector(".number_like strong").innerHTML = incrase;
-    return true;
 })
 
 
