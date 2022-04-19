@@ -75,6 +75,7 @@ posts.forEach(element => {
     </div>`
     elementoDom.insertAdjacentHTML("beforeend", createMarkup)
     //console.log(createMarkup)
+    
 })
 
 
@@ -84,14 +85,26 @@ posts.forEach(element => {
 const buttonClickLike = document.querySelector(".like")
 const incraseElement = parseInt(document.querySelector(".number_like strong").textContent)
 
+
 console.log(incraseElement);
 let incrase = 0;
 
-const eventClick = buttonClickLike.addEventListener("click", function (event) {
+function clickButton(incrase) {
+    buttonClickLike.addEventListener("click", function () {
 
-    this.classList.toggle("blue")
-    incrase = incraseElement + 1;
-    document.querySelector(".number_like strong").innerHTML = incrase;
-})
+        this.classList.toggle("blue")
+        console.log(buttonClickLike.classList.value);
+        if (buttonClickLike.classList.value == "like") {
+            document.querySelector(".number_like strong").innerHTML = incraseElement;
+        } else {
+            incrase = incraseElement + 1;
+            document.querySelector(".number_like strong").innerHTML = incrase;
+        }
+        
+    })
+    
+    
+}
 
+clickButton(incrase)
 
