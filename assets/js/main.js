@@ -49,24 +49,32 @@ Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i 
 const elementoDom = document.querySelector(".card")
 
 posts.forEach(element => {
-        const createMarkup = `<div class="card_sup">
-        ${element.image_avatar}
-        <div class="title">
-        <h5>${element.nome_autore}</h5>
-        <p class="card-text"><small class="text-muted">${element.data}</small></p>
+    const createMarkup = `
+    <div class="divisione">
+        
+            <div class="card_sup">
+                ${element.image_avatar}
+            <div class="title">
+                <h5>${element.nome_autore}</h5>
+                <p class="card-text"><small class="text-muted">${element.data}</small></p>
+            </div>
         </div>
-    </div>
 
-    <div class="card_body">
-        <p>${element.paragraph}</p>
-        ${element.image_post}
-        <div class="like-status">
-            <div class="like">Mi Piace</div>
-            <div class="number_like">Piace a <strong>${element.n_of_like}</strong> persone</div>
+        <div class="card_body">
+            <p>${element.paragraph}</p>
+            ${element.image_post}
+            <div class="like-status">
+                <div class="like">
+                     Mi Piace
+                </div>
+                <div class="number_like">
+                    Piace a <strong>${element.n_of_like}</strong> persone
+                </div>
+            </div>
         </div>
     </div>`
-        elementoDom.insertAdjacentHTML("beforeend", createMarkup)
-        //console.log(createMarkup)
+    elementoDom.insertAdjacentHTML("beforeend", createMarkup)
+    //console.log(createMarkup)
 })
 
 
@@ -80,7 +88,7 @@ console.log(incraseElement);
 let incrase = 0;
 
 const eventClick = buttonClickLike.addEventListener("click", function (event) {
-    
+
     this.classList.toggle("blue")
     incrase = incraseElement + 1;
     document.querySelector(".number_like strong").innerHTML = incrase;

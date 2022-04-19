@@ -16,8 +16,10 @@ body{
     border-radius: 5rem;
 }
 
-.card{
+.divisione{
+    background-color: white;
     margin: 1rem;
+    border-radius: 10px;
 }
 
 .title{
